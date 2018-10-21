@@ -28,6 +28,7 @@ namespace CalcSolver
 
         public void Division(ref int value, int x)
         {
+            if(x!=0)
             value /= x;
         }
 
