@@ -16,6 +16,16 @@ namespace CalcSolver
             value -= x;
         }
 
+        public void Multiplication(ref int value, int x)
+        {
+            value *= x;
+        }
+
+        public void Division(ref int value, int x)
+        {
+            value /= x;
+        }
+
         public void AddToNum(ref int value, string x)
         {
             string result = value.ToString() + x;
