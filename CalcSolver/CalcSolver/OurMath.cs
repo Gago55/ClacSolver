@@ -6,6 +6,12 @@ namespace CalcSolver
 {
     class OurMath
     {
+        public void P2M(ref int value)
+        {
+            value *= -1;
+        }
+
+
         public void Plus(ref int value , int x)
         {
             value += x;
@@ -52,6 +58,7 @@ namespace CalcSolver
             num = num.Remove(lastIndex);
             value = Convert.ToInt32(num);
         }
+
         private int getCountsOfDigits(long number)
         {
             string num = number.ToString();
