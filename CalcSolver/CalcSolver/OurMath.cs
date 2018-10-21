@@ -6,7 +6,7 @@ namespace CalcSolver
 {
     class OurMath
     {
-<<<<<<< HEAD
+
         public void P2M(ref int value)
         {
             value *= -1;
@@ -80,7 +80,6 @@ namespace CalcSolver
             string num = number.ToString();
             return num.Length;
         }
-=======
->>>>>>> master
+
     }
 }
