@@ -15,5 +15,11 @@ namespace CalcSolver
         {
             value -= x;
         }
+
+        public void AddToNum(ref int value, string x)
+        {
+            string result = value.ToString() + x;
+            value = Convert.ToInt32(result);
+        }
     }
 }
