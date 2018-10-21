@@ -35,6 +35,13 @@ namespace CalcSolver
             value = Convert.ToInt32(newnum);
         }
 
+        public void RemoveLast(ref int value)
+        {
+            string num = value.ToString();
+            int lastIndex = num.Length - 1;
+            num = num.Remove(lastIndex);
+            value = Convert.ToInt32(num);
+        }
         private int getCountsOfDigits(long number)
         {
             string num = number.ToString();
