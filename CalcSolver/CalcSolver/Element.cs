@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CalcSolver
 {
-    class Element
+    class Element : OurMath
     {
         public Instruments inst = new Instruments();
         public int x;
