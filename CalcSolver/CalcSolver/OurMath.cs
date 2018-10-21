@@ -11,7 +11,6 @@ namespace CalcSolver
             value *= -1;
         }
 
-
         public void Plus(ref int value , int x)
         {
             value += x;
@@ -57,6 +56,11 @@ namespace CalcSolver
             int lastIndex = num.Length - 1;
             num = num.Remove(lastIndex);
             value = Convert.ToInt32(num);
+        }
+
+        public void Transformation(ref int value , int x , int y)
+        {
+
         }
 
         private int getCountsOfDigits(long number)
