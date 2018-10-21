@@ -22,6 +22,19 @@ namespace CalcSolver
             value = Convert.ToInt32(result);
         }
 
+        public void Reverse(ref int value)
+        {
+            string num = value.ToString();
+            string newnum ="";
+            while(num.Length > 0)
+            {
+                int lastIndex = num.Length - 1;
+                newnum += num[lastIndex];
+                num = num.Remove(lastIndex);
+            }
+            value = Convert.ToInt32(newnum);
+        }
+
         private int getCountsOfDigits(long number)
         {
             string num = number.ToString();
