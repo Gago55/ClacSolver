@@ -39,6 +39,14 @@ namespace CalcSolver
 
         public void Reverse(ref int value)
         {
+            bool minus = false;
+
+            if (value<0)
+            {
+                minus = true;
+                P2M(ref value);
+            }
+
             string num = value.ToString();
             string newnum ="";
             while(num.Length > 0)
@@ -48,6 +56,8 @@ namespace CalcSolver
                 num = num.Remove(lastIndex);
             }
             value = Convert.ToInt32(newnum);
+
+            if (minus) P2M(ref value);
         }
 
         public void RemoveLast(ref int value)
