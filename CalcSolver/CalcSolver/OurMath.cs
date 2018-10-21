@@ -21,5 +21,11 @@ namespace CalcSolver
             string result = value.ToString() + x;
             value = Convert.ToInt32(result);
         }
+
+        private int getCountsOfDigits(long number)
+        {
+            string num = number.ToString();
+            return num.Length;
+        }
     }
 }
