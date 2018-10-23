@@ -56,6 +56,9 @@ namespace CalcSolver
                     case Instruments.DIV:
                         Division(ref value, x);
                         break;
+                    case Instruments.ADDTONUM:
+                        AddToNum(ref value, x.ToString());
+                        break;
                 }
             }
         }
