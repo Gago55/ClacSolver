@@ -13,6 +13,7 @@ namespace CalcSolver
         DIV,
         REV,
         REMOVE,
-        ADDTONUM
+        ADDTONUM,
+        TRANS
     }
 }
