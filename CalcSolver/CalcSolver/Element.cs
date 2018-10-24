@@ -21,7 +21,7 @@ namespace CalcSolver
         public Element(Instruments instrument)
         {
             inst = instrument;
-            argument = 2;
+            argument = 1;
         }
 
         public Element(Instruments instrument , int x , int y)
