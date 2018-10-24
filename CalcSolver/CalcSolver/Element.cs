@@ -8,24 +8,33 @@ namespace CalcSolver
     {
         public Instruments inst = new Instruments();
         public int x;
-        bool oneArgument;
+        public int y;
+        int argument;
 
         public Element(Instruments instrument,int x)
         {
             inst = instrument;
             this.x = x;
-            oneArgument = false;
+            argument = 2;
         }
 
         public Element(Instruments instrument)
         {
             inst = instrument;
-            oneArgument = true;
+            argument = 2;
+        }
+
+        public Element(Instruments instrument , int x , int y)
+        {
+            inst = instrument;
+            this.x = x;
+            this.y = y;
+            argument = 3;
         }
 
         public void Do(ref int value)
         {
-            if(oneArgument)
+            if(argument == 1)
             {
                 switch (inst)
                 {
@@ -40,7 +49,7 @@ namespace CalcSolver
                         break;
                 }
             }
-            else
+            else if (argument == 2)
             {
                 switch (inst)
                 {
@@ -59,6 +68,13 @@ namespace CalcSolver
                     case Instruments.ADDTONUM:
                         AddToNum(ref value, x.ToString());
                         break;
+                }
+            }
+            else
+            {
+                if(inst == Instruments.TRANS)
+                {
+                    Transformation(ref value,x,y);
                 }
             }
         }
