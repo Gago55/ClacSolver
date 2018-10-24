@@ -43,7 +43,7 @@ namespace CalcSolver
                     foreach (var i in permu)
                     {
                         if (i.inst == Instruments.TRANS)
-                            Console.Write(i.inst.ToString() + i.x.ToString() + " ");
+                            Console.Write(i.inst.ToString() + "_" + i.x.ToString() + " ");
                         else
                             Console.Write(i.inst.ToString() + " ");
                     }
@@ -73,7 +73,7 @@ namespace CalcSolver
                     {
                         int index = Convert.ToInt32(num[j]) - 48;
                         if(elements[index].inst==Instruments.TRANS)
-                            Console.Write(elements[index].inst.ToString() + elements[index].x.ToString() + " ");
+                            Console.Write(elements[index].inst.ToString() + "_" + elements[index].x.ToString() + " ");
                         else
                         Console.Write(elements[index].inst.ToString() + " ");
                     }
