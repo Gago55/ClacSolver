@@ -9,20 +9,19 @@ namespace CalcSolver
         static void Main(string[] args)
         {
 
-            Element e1 = new Element(Instruments.ADDTONUM,2);     
-            Element e2 = new Element(Instruments.MINUS, 1);
+            Element e1 = new Element(Instruments.P2M);
+            Element e2 = new Element(Instruments.PLUS, 7);
             Element e3 = new Element(Instruments.MULT, 3);
-            Element e4 = new Element(Instruments.PLUS, 4);
-            Element e5 = new Element(Instruments.REV);
+            Element e4 = new Element(Instruments.REV);
 
-            List<Element> seq = new List<Element>() {e1, e2, e5};
+            List<Element> elements = new List<Element>() { e1 , e2 , e3 , e4};
 
-            Level level = new Level(3,121,212,3,seq);
-            level.Solve();
-
+            Level level = new Level(5, 0, -5, elements);
+           
             Console.ReadLine();
         }
-
         
+
+
     }
 }
