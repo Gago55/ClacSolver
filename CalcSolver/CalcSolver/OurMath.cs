@@ -66,9 +66,17 @@ namespace CalcSolver
         public void RemoveLast(ref int value)
         {
             string num = value.ToString();
-            int lastIndex = num.Length - 1;
-            num = num.Remove(lastIndex);
-            value = Convert.ToInt32(num);
+
+            if (num.Length == 1)
+            {
+                value = 0;
+            }
+            else
+            {
+                int lastIndex = num.Length - 1;
+                num = num.Remove(lastIndex);
+                value = Convert.ToInt32(num);
+            }
         }
 
         public void Transformation(ref int value , int x , int y)
