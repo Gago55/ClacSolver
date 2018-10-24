@@ -29,6 +29,7 @@ namespace CalcSolver
 
         public void Division(ref int value, int x)
         {
+            if(value % x == 0)
             if(x!=0)
             value /= x;
         }
@@ -72,7 +73,61 @@ namespace CalcSolver
 
         public void Transformation(ref int value , int x , int y)
         {
+            string num = value.ToString();
+            string newnum = "";
+            string X = x.ToString();
+            string Y = y.ToString();
 
+            if (X.Length == 1)
+            {
+                for (int i = 0; i < num.Length; i++)
+                {
+                    if (num[i].ToString() == X)
+                    {
+                        newnum += Y;
+                    }
+                    else
+                    {
+                        newnum += num[i];
+                    }
+                }
+                value = Convert.ToInt32(newnum);
+            }
+            else
+            {
+                int changed = 0;
+                for (int i = 0; i < num.Length; i++)
+                {
+                    string partOfString="";
+                    bool lastChars = false;
+                    
+
+                    if (num.Length - i < X.Length)
+                        lastChars = true;
+                    
+                    if(changed == 0)
+                    for(int j = 0; j < X.Length; j++)
+                    {
+                        if(!lastChars)
+                        partOfString += num[i + j];
+                    }
+
+                    if ( partOfString == X)
+                    {
+                        newnum += Y;
+                        changed = X.Length;
+                    }
+                    else
+                    {
+                        if (changed == 0)
+                            newnum += num[i];
+                    }
+
+                    if (changed > 0)
+                        changed--;
+                }
+                value = Convert.ToInt32(newnum);
+            }
         }
 
         private int getCountsOfDigits(long number)
